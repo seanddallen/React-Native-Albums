@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Header from './src/components/Header';
+import AlbumList from './src/components/AlbumList';
 
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Albums</Text>
-        <Text style={styles.instructions}>Sean's First React Native App</Text>
-      </View>
+      <React.Fragment>
+        <Header headerText={'Albums'} /> 
+        <View style={styles.container}>
+          <AlbumList />
+        </View>
+      </React.Fragment>
     );
   }
 }

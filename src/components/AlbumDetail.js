@@ -1,9 +1,14 @@
+/* eslint-disable arrow-body-style */
+/* eslint-disable no-unused-vars */
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
+import Card from './Card';
 
 const AlbumDetail = (props) => {
-    return (    
-        <Text>{props.album.title}</Text>
+    return (  
+        <Card>
+            <Text>{props.album.title}</Text>
+        </Card>  
     );
 };
 

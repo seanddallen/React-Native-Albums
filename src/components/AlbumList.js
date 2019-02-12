@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+/* eslint-disable no-unused-vars */
 /* eslint-disable eol-last */
 /* eslint-disable arrow-body-style */
 import React, { Component } from 'react';
@@ -16,14 +18,17 @@ class AlbumList extends Component {
             .then(res => this.setState({ albums: res.data }));
     }
 
-    renderAlbums = () => {
-        return this.state.albums.map(album => <AlbumDetail key={album.title} album={album} />); 
-    }
+    // renderAlbums = () => {
+    //     return this.state.albums.map(album => <AlbumDetail key={album.title} album={album} />); 
+    // }
 
     render() {
+        const albumList = this.state.albums.map(album => <AlbumDetail key={album.title} album={album} />);
+
         return (
             <View>
-                <Text>{this.renderAlbums()}</Text>
+                {/* <Text>{this.renderAlbums()}</Text> */}
+                { albumList }
             </View>
         );
     }
